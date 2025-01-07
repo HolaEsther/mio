@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inicio de Sesión</title>
+
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+</style>
+
+
+
+</head>
+<body>
+  
+<div class="container">
+
+ <!--  para REGISTRARSE-->
+  <h2>Registrarse</h2>   
+  <form id="registroForm"> 
+    <label for="usuario">Usuario (correo-e):</label><br>
+    <input type="email" id="usuario" name="usuario" required><br>
+ 
+    <label for="contrasena">Contraseña:</label><br>
+    <input type="password" id="contrasena" name="contrasena" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{6,10}$" title="La contraseña debe contener al menos un número, una mayúscula y un signo; y con una longitud entre 6 y 10 caracteres." required><br>
+    
+    <button type="submit">Registrarse</button>  <!--  le digo en el JS qué hará -->
+  </form>
+   
+    <!--  para LOGARSE-->
+  <h2>Login</h2> 
+    <form id="loginForm"> 
+      <label for="usuarioLogin">Usuario:</label><br> 
+      <input type="email" id="usuarioLogin" name="usuarioLogin" required><br>
+
+      <label for="contrasenaLogin">Contraseña:</label><br>
+      <input type="password" id="contrasenaLogin" name="contrasenaLogin" required><br>
+      
+      <button type="submit">Login</button>  <!--  le digo en el JS qué hará -->
+  </form> 
+
+</div>
+
+
+
+
+
+
+<script> 
+
+//  para REGISTRARSE
+
+    document.getElementById("registroForm").addEventListener("submit", function(event) {  //  significa que se está añadiendo un evento de escucha a ese formulario. Cuando se envía el formulario (evento de "submit"), se ejecutará la función 
+
+        event.preventDefault(); // Este método  evitará  que el navegador siga el enlace y redirija a otra página
+        let usuario = document.getElementById("usuario").value; 
+
+      if(!usuario.includes("@")) { 
+          alert("El usuario debe ser un correo-e válido"); 
+          return; // -en este contexto- Al incluir el return, se detiene la ejecución del resto del código
+        } 
+        
+        // Verificar si la contraseña cumple con los requisitos 
+      if(!contrasena.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{6,10}$/)) { 
+              alert("La contraseña debe contener al menos un número, una mayúscula, un signo y tener entre 6 y 8 caracteres."); 
+              return;  // -en este contexto- Al incluir el return, se detiene la ejecución del resto del código
+            }
+       // Registro exitoso 
+       alert("¡Registro exitoso!");
+    });
+    
+
+    //  para LOGARSE
+
+      document.getElementById("loginForm").addEventListener("submit", function(event) {  //  significa que se está añadiendo un evento de escucha a ese formulario. Cuando se envía el formulario (evento de "submit"), se ejecutará la función 
+
+              event.preventDefault();  // Este método  evitará  que el navegador siga el enlace y redirija a otra página
+              let usuarioLogin = document.getElementById("usuarioLogin").value; 
+              let contrasenaLogin = document.getElementById("contrasenaLogin").value; 
+            // Verificar si el usuario y contraseña coinciden con los registrados
+            // Aquí se debería incluir la lógica para verificar en una base de datos 
+            // Simular un login exitoso Y  redirigir a la página pretendida
+            alert("¡Login exitoso! Bienvenido " + usuarioLogin); 
+            window.location.href = 'https://cienciayamor.tv/video/lo-que-nos-ensenaron-sobre-la-celula-es-falso-nos-mienten-de-las-mejores-charlas-de-stefan-lanka/';
+      }); 
+
+  </script>
+
+
+
+</body>
+</html>
+    
+</body>
+</html>

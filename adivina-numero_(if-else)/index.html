@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADIVINA EL NÚMERO -ejercitando: if...else-</title>  
+    <link rel="stylesheet" href="main-if-else.css">
+</head>
+<body>
+
+
+    <h1> ADIVINA EL NÚMERO </h1>                               <!-- O K  ¡¡ F U N C I O N A !! -->
+
+    <input type="number" id="cajaNumero">
+    <button  id="btn" type="number"> Comprobar </button>
+    <p> CANTIDAD DE INTENTOS: </p>
+    <p id="intento"> </p>  <!-- para recibir cada conteo y se escriba en pantalla esa cantidad -->
+    <p id="mensaje"> </p>   <!-- para recibir cada mensaje dinámicamente  -->
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   <!-- LIBRERÍA de JAVASCRIPT -->
+    
+<script>
+    $(document).ready(function (){  
+
+       
+        let numAzar=Math.floor(Math.random()*100)+1;  // aquí el juego por si mismo selecciona un número al azar
+
+        let cajaNumero=document.getElementById('cajaNumero');
+        let numIngresado=document.getElementById('numIngresado');
+       
+        let intento=document.getElementById('intento');  //  la <p> vacía en el que irán apareciendo el número de intentos
+        let mensaje=document.getElementById('mensaje'); // aún no existen mensajes
+
+        let btn=document.getElementById('btn');
+            btn.addEventListener("click",chequear,false);
+
+        let intentos=0; // CONTADOR inicia en 0 y se llama "intentoS" (por defecto NO se ve) MIENTRAS QUE "intento" es el >p> donde se reflejará ese conteo
+    
+
+        function chequear(){
+
+            intentos ++; // le decimos que sume 1 cada vez que de la vuelta al bucle
+            intento.textContent=intentos;  // ese intento contendrá un texto (que será cada incremento del número del conteo) y que será el CONTADOR
+            
+            let numIngresado=parseInt(cajaNumero.value);  // pues todo input traduce por defecto aunqu sean números a strings
+
+            if(numIngresado<1||numIngresado>100){
+                mensaje.textContent="Introduce un número entre 1 y 100";
+                mensaje.style.color="black";
+                return;
+            }if(numIngresado===numAzar){
+                mensaje.textContent="¡FELICIDADES!. Has adivinado el número";
+                mensaje.style.color="green";
+                cajaNumero.disable=true;
+            }else if(numIngresado<numAzar){
+                mensaje.textContent="El número es MAS ALTO que el que escribiste";
+                mensaje.style.color="red";
+            }else{
+                mensaje.textContent="El número es MAS BAJO que el que escribiste";
+                mensaje.style.color="red";         
+            }
+            console.log(cajaNumero.value)
+        }
+      
+
+
+
+    });     // FIN de JavaScript
+</script>
+
+    
+</body>
+</html>

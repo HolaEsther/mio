@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AL CLICK SE DISTRIBUYE ARRAY </title>
+    <link rel="stylesheet" href="css/alClickArray.css">             <!--  ===============  O K  =================  -->
+</head>
+<body>
+
+    <!--  EXPLICACIÓN DE CÓMO SE HA DE HACER:
+        
+HTML:    Se crean elementos para mostrar una lista de clientes y una sección para mostrar información. Cada nombre de cliente tiene un atributo data-index que corresponde a su posición en el array.
+
+CSS:    Proporciona estilos básicos, ocultando la información de los clientes por defecto y dándole un aspecto visual a la página.
+
+JavaScript:    Se añade un evento de clic a cada nombre de cliente. Cuando se hace clic en un nombre, se muestra la información asociada y se oculta la información de otros clientes.
+Este código es completamente funcional, y al hacer clic en los nombres de los clientes, los detalles específicos de cada uno se mostrarán en la sección correspondiente. s-->
+
+   
+
+<h1 id="titular">---AL CLICK SE DISTRIBUYE ARRAY ---</h1>
+    
+    <div id="cajaNombres">  
+        <h2 class="clientes" data-index="0">Pedro</h2>
+        <h2 class="clientes" data-index="1">María</h2>
+        <h2 class="clientes" data-index="2">Luis</h2>
+    </div>
+
+
+    <div id="volcado">
+       
+            <h3 id="signo"> Signo:  </h3>
+            <h3 id="anos"> Años:  </h3>
+            <h3 id="ciudadd"> Ciudad: </h3>
+            <h3 id="deporte">Deporte: </h3>        
+        
+        <div id="volcado-imagen"> <img src="" alt="" id="imagen-volcada"> </div>
+    </div>
+
+   
+
+
+
+    <script src="js/alClickArray.js"> </script>
+
+</body>
+</html>

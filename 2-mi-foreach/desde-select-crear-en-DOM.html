@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/aeliminar.css">
+    <title>  CREAR CONTENIDO EN DOM desde SELECT  </title>    
+</head>
+<body>
+    
+
+
+               <!--  EJERCÍCIO  :  O K  !!!!   --> 
+
+
+    <div id="personal">
+
+        <label for="profesionales">Elige una opción:</label>
+        <select name="los-nombres" id="los-nombres">
+            <option value="arquitecto">ARQUITECTO</option>
+            <option value="ingeniero">INGENIERO</option>
+            <option value="naturista">NATURISTA</option>
+            <option value="programador">PROGRAMADOR</option>
+        </select>
+
+        <button id="btn" value="Ir"> VER </button>
+
+
+        <div id="volcado-ficha">   <!--  Aquí, en cada <p> se volcarán los resultados del select que tenemos en archivo js -->          
+            <p id="v-nombre">  </p> 
+            <p id="v-edad">  </p>   
+            <p id="v-ciudad">  </p>
+        </div>
+
+</div>
+
+
+
+
+
+<script src="js/desde-select.js">   </script>
+
+</body>
+</html>

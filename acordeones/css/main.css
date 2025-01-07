@@ -1,0 +1,61 @@
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border: 20px solid orange;
+}
+
+#enviar {
+  margin-left: 3em;
+  width: 80px;
+  height: 40px;
+  font-size: 1.2em;
+}
+
+.inactivo {
+  background-color: pink;
+}
+
+.activo {
+  background-color: green;
+}
+
+.acordeones {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: auto;
+  border: 4px solid black;
+  background-color: aquamarine;
+  padding: 2em 2em;
+}
+.acordeones__h2 {
+  color: red;
+  font-size: 2em;
+}
+.acordeones__conjuntitos {
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+}
+.acordeones__check-1, .acordeones__check-2, .acordeones__check-3 {
+  display: none;
+}
+.acordeones__check-1:checked ~ .acordeones__conjuntitos-1 {
+  height: auto;
+  background-color: darkturquoise;
+  transition: height 1.1s;
+}
+.acordeones__check-2:checked ~ .acordeones__conjuntitos-2 {
+  height: auto;
+  background-color: darkturquoise;
+  transition: height 1.1s;
+}
+.acordeones__check-3:checked ~ .acordeones__conjuntitos-3 {
+  height: auto;
+  background-color: darkturquoise;
+  transition: height 1.1s;
+}/*# sourceMappingURL=main.css.map */

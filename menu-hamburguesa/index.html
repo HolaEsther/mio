@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú HAMBURGUESA con CSS</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div class="content">
+
+        <input type="checkbox" id="check" name="check" class="content__inputs">
+        <label for="check"  id="hambur" class="content__labels"> <span>  </span> </label>
+
+        <nav id="nav" class="content__navs">
+            <ul>
+                <li>Home</li>
+                <li>Galería</li>
+                <li>Contacto</li>
+            </ul>
+        </nav>
+
+    </div>
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   <!-- LIBRERÍA de JAVASCRIPT -->
+
+    <script>
+        $(document).ready(function (){
+
+                var subtit=document.getElementById('nav');
+
+                subtit.addEventListener('click',Funci,false);
+
+                function Funci(){
+                    subtit.style.backgroundColor='rgb(200,200,200)';
+                    subtit.style.width='150px';
+                   
+                }
+
+        });
+
+      
+
+    </script>
+</body>
+</html>

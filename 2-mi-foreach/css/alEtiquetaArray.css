@@ -1,0 +1,42 @@
+body{background-color: rgb(19, 44, 85);}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifs;
+    color:rgb(145, 161, 161);
+    font-size:2.3em;
+    margin: 3em auto;
+}
+h2, label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifs;
+    color:rgb(106, 158, 207);
+    font-size:1.3em;
+    margin: 3em auto;
+}
+h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifs;
+    color:rgb(106, 158, 207);
+    font-size:1.3em;
+    margin: 3em auto;
+}
+
+#cajaNombres{
+    width: 100px;
+    height: auto;
+    background-color: cadetblue;
+    margin:3em;
+    padding:.7em
+}
+.clientes{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifs;
+    color:rgb(106, 158, 207);
+    font-size:1.3em;
+    line-height: 1.7em;
+}
+
+#volcado{
+    width: 700px;
+    height: auto;
+    border: 4px greenyellow solid;
+    margin:3em;
+    padding:.7em
+}

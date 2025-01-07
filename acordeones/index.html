@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACORDEONES con CSS</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <script src="js/jquery-3.2.1.min.js">  </script> -->  <!-- JAVASCRIPT --> 
+</head>
+<body>
+
+
+
+    <div id="cajon" class="acordeones">
+
+        <input type="checkbox" name="check-1" class="acordeones__check-1" id="check-1">
+        <label for="check-1" class="acordeones__label-1" id="label-1">  MIRA UNO </label>
+        <div class="acordeones__conjuntitos-1 acordeones__conjuntitos" id="conjuntito-1">
+            <h2 id="sub-tit-1" class="acordeones__h2">  SALITA CON PERSONAS  </h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Facere, quisquam. Pariatur assumenda non quas eius ad fugiat natus sint quasi delectus. 
+                Quod alias ex laborum eius nisi optio, nihil sunt.</p>
+            <img src="imags/salita-gente.jpg" alt="salita con personas" class="acordeones__imag"  id="imag1">
+        </div>
+
+
+        <input type="checkbox" name="check-2" class="acordeones__check-2" id="check-2">
+        <label for="check-2" class="acordeones__label-2" id="label-2">  MIRA DOS </label>
+        <div class="acordeones__conjuntitos-2 acordeones__conjuntitos" id="conjuntito-2">
+            <h2 class="acordeones__h2">EMPERATRIZ TAROT</h2>
+            <p>yyrem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Facere, quisquam. Pariatur assumenda non quas eius ad fugiat natus sint quasi delectus. 
+                Quod alias ex laborum eius nisi optio, nihil sunt.</p>
+            <img src="imags/emperatriz-tarot.jpg" alt="salita con personas" class="acordeones__imag">
+        </div>
+
+
+        <input type="checkbox" name="check-3" class="acordeones__check-3" id="check-3">
+        <label for="check-3" class="acordeones__label-3" id="label-3">   MIRA TRES </label>
+        <div class="acordeones__conjuntitos-3 acordeones__conjuntitos" id="conjuntito-3">
+            <h2 class="acordeones__h2">DOMO TIERRA</h2>
+            <p id="parrafo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                kkere, quisquam. Pariatur assumenda non quas eius ad fugiat natus sint quasi delectus. 
+                Quod alias ex laborum eius nisi optio, nihil sunt.</p>
+            <img src="imags/domo-tierra.jpg" alt="salita con personas" class="acordeones__imag">
+        </div>
+
+    </div>  
+
+
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   <!-- LIBRERÍA de JAVASCRIPT -->
+
+    <script>
+        $(document).ready(function (){  
+
+            /* clik a body cambia a rojo fondo de la caja contenedora */
+              var body=document.body;
+              body.addEventListener('click',Cambio_Color,false);
+                function Cambio_Color(){
+                    document.querySelector('.acordeones').style.backgroundColor="red";
+                }
+              console.log(body);
+
+     
+           /* mouse sobre el h2 primero cabia color de segundo h2 a blanco y su tamaño a 4em, y cambia a amarillo fondo del body */
+                var caja=document.querySelectorAll("h2")[0];
+                caja.addEventListener('mouseover',Otro_Color,false);
+                    function Otro_Color(){
+                        document.querySelectorAll("h2")[1].style.color="white";
+                        document.querySelectorAll("h2")[1].style.marginTop="4em";
+                        document.body.style.backgroundColor="yellow";                        
+                    }
+                console.log(caja);
+
+
+        /*  VAMOS A CREAR ELEMENTOS EN EL DOM  */
+
+        
+
+
+
+
+
+
+/*
+                var iman=document.querySelectorAll("p")[1].textContent="blablalballablal ablaalall";
+                console.log(iman);
+
+                var oman=document.querySelectorAll("img")[1];
+                oman.src="imags/domo-tierra.jpg";                  
+                    console.log(oman);
+
+
+                var todo=document.querySelector("#sub-tit-1");
+                todo.addEventListener('click',Otro_Color,false);
+                    function Otro_Color(){
+                      document.querySelector("#label-1").style.fontSize="68px";
+                    }
+
+                var total=document.querySelector("#cajon");
+                total.addEventListener('mouseover',Cambiar,false);
+                    function Cambiar(){
+                        total.style.backgroundColor="blue";
+                        document.body.style.backgroundColor="yellow";
+                    }
+
+                var total2=document.querySelector("#cajon");
+                    total2.addEventListener('mouseout',Cambiar2,false);
+                    function Cambiar2(){
+                        total2.style.backgroundColor="pink";
+                        document.body.style.backgroundColor="grey";
+                    }
+                    console.log(total);
+                    console.log(total2);
+
+       */
+
+        });
+
+      
+
+    </script>
+    
+</body>
+</html>

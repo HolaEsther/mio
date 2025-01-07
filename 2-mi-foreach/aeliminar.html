@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/aeliminar.css">
+    <title>Document</title>    
+</head>
+<body>
+    
+
+
+
+
+
+<!--  LOGAMIENTO para entrar en una página  (  Aunque hay que hacerlo en un archivo A PARTE  ) -->
+ <div class="container"> 
+    <h2>Iniciar Sesión</h2> 
+    <input type="text" id="username" placeholder="Usuario">
+     <input type="password" id="password" placeholder="Contraseña"> 
+     <button onclick="login()">Ingresar</button> 
+</div>
+<!--  FIN de LOGAMIENTO para entrar en una página  -->
+
+
+
+
+
+
+    <div id="personal">
+        <label for="profesionales">Elige una opción:</label>
+        <select name="los-nombres" id="los-nombres">
+            <option value="arquitecto">ARQUITECTO</option>
+            <option value="ingeniero">INGENIERO</option>
+            <option value="naturista">NATURISTA</option>
+            <option value="programador">PROGRAMADOR</option>
+        </select>
+
+        <button id="btn" value="Ir"> VER </button>
+
+        <div id="volcado-ficha">   <!--  Aquí, en cada <p> se volcarán los resultados del select -->          
+            <p id="v-nombre">  </p> <p id="v-edad">  </p>   <p id="v-ciudad">  </p>
+        </div>
+</div>
+
+
+
+
+<!--  LO MISMO QUE anterior    PERO    NO con select     SINO     con varias h2 para opciones  --> 
+<div id="personal2">
+    <p> Elige una opción:</p>    
+    
+        <h2>ARQUITECTO2</h2>
+        <h2>INGENIERO2</h2>
+        <h2>NATURISTA2</h2>
+        <h2>PROGRAMADOR2</h2>
+
+     <div id="volcado-ficha2">   <!--  Aquí, en cada <p> se volcarán los resultados del select -->          
+        <p id="v-nombre2">  </p> <p id="v-edad2">  </p>   <p id="v-ciudad2">  </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+<label for="password">Introduzca una contraseña de 4 dígitos:</label>
+<input type="password" maxlength="4" required> 
+<button type="submit">Enviar</button> 
+
+
+
+
+
+<label for="fecha">Introduce una fecha en formato dd/mm/aaaa:</label>
+<input type="date" id="fecha" maxlength="10" placeholder="dd/mm/aaaa" oninput="autofill(event)">
+
+
+
+    
+
+    <div id="paquete">
+            <label for="profesiones">Elige una opción:</label>
+
+            <select name="profesiones" id="profesiones">
+                <option value="Piloto">Piloto</option>
+                <option value="Médico">Médico</option>
+                <option value="Informático">Informático</option>
+                <option value="Diseñador web">Diseñador web</option>
+            </select>
+
+            <button id="boton" value="Ir"> IR </button>
+    </div>
+
+    <div id="caja2">
+        <p id="p-caja2">   <!-- para volcar eventuales resultados aquí --> </p>        
+    </div>
+
+    <div id="caja">
+        <p id="p-caja">   <!-- para volcar eventuales resultados aquí --> </p>        
+    </div>
+
+
+    <div id="pulsar">    </div> 
+
+    <div class="gallery" id="gallery">
+        <!-- Las imágenes se cargarán aquí -->
+    </div>
+
+        
+    <div id="cubo">
+        <div  class="cubetes">  </div>
+        <div  class="cubetes">  </div>
+        <div  class="cubetes">  </div>
+        <div  class="cubetes">  </div>
+        <div  class="cubetes">  </div>  
+        <div  class="cubetes">  </div>  
+        <div  class="cubetes">  </div>  
+        <div  class="cubetes">  </div>      
+    </div>
+
+
+
+<script src="js/aeliminar.js">   </script>
+
+</body>
+</html>

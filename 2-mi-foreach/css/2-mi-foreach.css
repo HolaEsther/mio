@@ -1,0 +1,130 @@
+body{
+    background-color:beige
+}
+
+h1{
+    margin: 1em;;
+    color: rgb(88, 44, 88);
+    font-size:30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+h2{
+    margin: 1.5em;;
+    color: rgb(88, 44, 88);
+    font-size:21px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+p{
+    margin: .8em;;
+    color: rgb(62, 44, 62);
+    font-size:17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h3{
+    margin: .7em;;
+    color: rgb(88, 44, 88);
+    font-size:15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+h3.anos{
+    margin: .7em;;
+    color: rgb(103, 91, 109);
+    font-size:18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:bolder; 
+    font-style: italic;
+}
+
+#contenedor{
+    padding:.3em;
+    color: rgb(48, 54, 224);
+    font-size: 14px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 130px;
+    height: auto;
+    border: 5px solid grey;
+}
+
+#volcado{
+    margin-top:20px;
+    padding:2em;
+    color: violet;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 1000px;
+    height: 500px;
+    border: 5px solid rgb(222, 83, 83);
+}
+#volcado-imagen{
+    margin-top:20px;
+    padding:1em;
+
+    width: 580px;
+    height: 460px;
+    border: 5px solid rgb(4, 12, 57);
+}
+#volcado-imagen2{
+    margin-top:20px;
+    padding:1em;
+
+    width: 580px;
+    height: 460px;
+    border: 5px solid rgb(45, 71, 219);
+}
+
+
+
+
+.volcadofondos{
+    
+}
+.volcadoRata{
+    background-image: url("../img/leon.jpg");
+}
+.volcadoTigre{
+    background-color: rgb(157, 52, 122);
+}
+.volcadoBuey{
+    background-color: rgb(98, 201, 198);
+}
+.prueba{        /* ELIMINABLE en cuanto haga unas comprobaciones */
+    background-color: rgb(40, 31, 49);
+}
+
+.imagenSobre{
+    border: 20px solid rgb(254, 215, 19);
+    width: 300px; height: 300px;
+    position:relative;
+    left:-120px;
+    top:-60px;
+    z-index:10;
+}
+.imagenSobre2{
+    border: 20px solid rgb(106, 246, 12);
+    width: 300px; height: 300px;
+    position:relative;
+    left:-100px;
+    top:-200px;
+    z-index:20;
+}
+.imagenSobre3{
+    border: 20px solid rgb(19, 223, 250);
+    width: 300px; height: 300px;
+    position:relative;
+    left:-160px;
+    top:-260px;
+    z-index:30;
+}
+
+.quitarImagen{
+    border: 20px solid rgb(254, 19, 195);
+}
+
+.cajas{
+    border:10px solid orange;
+    width: 450px;
+    height: 250px;
+}

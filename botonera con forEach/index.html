@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BOTONES si click CAMBIAN COLOR FONDO (mi prueba de forma DINÁMICA con forEach) </title>
+    <link rel="stylesheet" href="css/main-botones.css">
+
+</head>
+<body>
+                                  <!-- O K   FUNCIONA esta hipótesis mía  !!!!  -->
+
+
+<div id="content" class="elcontenedor"> 
+
+    <div id="botonera" class="labotonera">
+        <button id="b-rojo" class="elrojo btn"> rojo </button>
+        <button id="b-amarillo" class="elamarillo btn"> amarillo </button>
+        <button id="b-verde" class="elverde btn"> verde </button>
+        <button id="b-azul" class="elazul btn"> azul </button>
+    </div>
+    <div id="cajon" class="elcajon">      </div>    
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   <!-- LIBRERÍA de JAVASCRIPT -->
+
+<script>
+        $(document).ready(function (){  
+
+            let cajon=document.getElementById('cajon');
+            let esteEsElGrupo=document.querySelectorAll('button');   
+        
+
+            esteEsElGrupo.forEach(function(button){   // de ese colectivo de button, por cada uno de ellos que haga lo siguiente
+                    
+                button.addEventListener('click',cambiarFondo); // ese button que esté activo esté atento al click y salte entonces una función
+
+                function cambiarFondo(button){  // que diga que...
+                    cajon.classList=this.classList;  // ... trasfiera, haga equivalencia, misma clase que tiene ESE button al cajon ( en este clase sabemos que la clase que tiene cada button es un color de fondo distinto)
+                 }                 
+            })
+
+         
+
+        
+        
+
+        });     // FIN de JavaScript
+</script>
+
+</body>
+</html>

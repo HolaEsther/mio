@@ -1,0 +1,61 @@
+
+
+
+.inactivo{
+    background-color: pink;
+    margin-left:3em; 
+    width: 100px;
+    height: 40px;
+    font-size:1.2em;
+    color:red;    
+}
+
+.activo{
+    background-color: green;
+    margin-left:3em; 
+    width: 120px;
+    height: 40px;
+    font-size:1.2em;
+    color:yellow;
+
+}
+
+.irse{
+    
+    transform:translateY(-50px);
+    transition: all 0.5s;
+    visibility:hidden;
+
+}
+
+
+/*    //////////////////////////////////////// */  
+
+#disparador-rojo{
+    width: 100px;
+    height: 100px;
+    border-radius: 300px;
+    background-color: crimson;
+    margin-top:5em;
+}
+.cuadrado-rojo{
+    width: 100px;
+    height: 100px;
+    border:8px solid rgb(210, 125, 177);
+    background-color:  rgb(210, 125, 177);
+    margin-top:.5em;
+}
+.rectangulo-rojo{
+    width: 150px;
+    height: 80px;
+    border:8px solid rgb(221, 64, 161);
+    background-color:  rgb(210, 125, 177);
+    margin-top:.5em;
+}
+
+.cajas-rojo{
+    width: 300px;
+    height: 300px;
+    border:2px solid red;
+    margin-top:2em;
+}

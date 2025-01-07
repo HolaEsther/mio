@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BOTONES si click CAMBIAN COLOR FONDO (forma NO dinámica) </title>
+    <link rel="stylesheet" href="main-botones.css">
+
+</head>
+<body>
+    
+
+<div id="content" class="elcontenedor"> 
+
+    <div id="botonera" class="labotonera">
+        <button id="b-rojo" class="elrojo btn"> rojo </button>
+        <button id="b-amarillo" class="elamarillo btn"> amarillo </button>
+        <button id="b-verde" class="elverde btn"> verde </button>
+        <button id="b-azul" class="elazul btn"> azul </button>
+    </div>
+    <div id="cajon" class="elcajon">      </div>    
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   <!-- LIBRERÍA de JAVASCRIPT -->
+
+<script>
+        $(document).ready(function (){  
+
+
+            const bRojo=document.querySelector('#b-rojo');
+            bRojo.addEventListener("click",fondoRojo,false);
+            
+            const cajon=document.querySelector('#cajon');  // !!!! IMPRESCINDIBLE NO poner una CLASS SINO un ID
+
+            function fondoRojo(){              
+                cajon.classList.remove('fondo-amarillo');
+                cajon.classList='fondo-rojo';
+                //cajon.add('.fondo-rojo-padding');
+                cajon.textContent="ROJO";   
+            }
+
+         
+  
+            const bAmarillo=document.querySelector('#b-amarillo');
+            bAmarillo.addEventListener("click",fondoAmarillo,false);
+
+            function fondoAmarillo(){               
+                    cajon.classList.remove();                   
+                    cajon.classList='fondo-amarillo';         
+                    
+                    cajon.textContent="AMARILLO";            
+            }
+
+        
+            const bVerde=document.querySelector('#b-verde');
+            bVerde.addEventListener("click",fondoVerde,false);
+
+            function fondoVerde(){               
+                    cajon.classList.remove();                   
+                    cajon.classList='fondo-verde';         
+                    
+                    cajon.textContent="VERDE";            
+            }
+
+
+            const bAzul=document.querySelector('#b-azul');
+            bAzul.addEventListener("click",fondoAzul,false);
+
+            function fondoAzul(){               
+                    cajon.classList.remove();                   
+                    cajon.classList='fondo-azul';         
+                    
+                    cajon.textContent="AZUL";            
+            }
+
+
+        
+        
+
+        });     // FIN de JavaScript
+</script>
+
+</body>
+</html>

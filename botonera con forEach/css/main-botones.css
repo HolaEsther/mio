@@ -1,0 +1,67 @@
+
+
+.elcontenedor{
+    width: 90%;
+    height: 500px;
+    border: 5px solid orange;
+    display:flex;
+    flex-direction:column;
+    align-content: center;
+    text-align: center;
+}
+
+.labotonera{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    border:1px solid grey;
+    color:black;
+}
+
+.elrojo{
+    background-color:red
+}
+.elamarillo{
+    background-color:yellow
+}
+.elverde{
+    background-color:green
+}
+.elazul{
+    background-color:blue;
+}
+
+.fondo-rojo{
+    background-color: red;
+}
+.fondo-rojo-padding{  /* solo para probar si añadae con  .add  esta otra clase a la anterior qhe se añadió ...Y NO lo hace!!!  */
+    padding:10px;
+    margin-left:3em;
+}
+
+.fondo-amarillo{
+    background-color: yellow;
+}
+.fondo-verde{
+    background-color: green;
+}
+.fondo-azul{
+    background-color: blue;
+}
+
+#cajon{
+    width: 92%;
+    height: 370px;
+    border:6px solid blue;
+   
+    margin:5px;
+}

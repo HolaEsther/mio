@@ -1,0 +1,46 @@
+body{
+    background-color: aqua;
+
+
+
+        .content__labels span{
+            background: url(../imags/salita-gente.jpg) no-repeat,center,center;
+            width: 70px;
+            height: 70px;
+            position:absolute;
+                top:50px;
+                left:50px;
+                cursor:pointer;
+
+                    &__inputs{
+                        display:none;
+                    }
+            
+                    &__navs{
+                        position:absolute;
+                            top:60px;
+                            left:-100%;
+                                transition:left 0.6s;
+                        background-color: aquamarine;         
+                    }
+            
+                    &__input:checked~&__navs{
+                        left:100px;
+                    }
+
+        }
+
+        .content__label.content__labels span:hover{
+            background: url(../imags/emperatriz-tarot.jpg) no-repeat,center,center;
+
+            width: 70px;
+            height: 70px;
+            position:absolute;
+                top:50px;
+                left:50px;
+                cursor:pointer;
+            }
+
+        
+
+    }

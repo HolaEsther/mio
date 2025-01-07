@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AL ELEGIR EN SELECTOR SE DISTRIBUYE ARRAY </title>
+    <link rel="stylesheet" href="css/alSelectorBotonArray.css">                   <!--  ============  O K  ===================   -->
+</head>
+<body>
+
+    <!--  EXPLICACIÓN DE CÓMO SE HA DE HACER:    
+      
+    Html: Se establece la estructura básica, incluyendo un título y un formulario de selección que permite elegir entre tres clientes (Pedro, María y Luís).
+
+JavaScript:
+
+Se definen los datos para cada cliente en arrays.
+Se agrupan estos arrays en un array llamado clientes.
+La función actualizarVolcado obtiene el índice del cliente seleccionado y actualiza los elementos h3 y la imagen correspondiente.
+Se añade un evento al selector para que, al cambiar de opción, la información se actualice automáticamente.
+Finalmente, se llama a la función actualizarVolcado al cargar la página para mostrar la información del primer cliente por defecto.-->
+        
+
+   
+    <h1 id="titular">---AL SELECCIONAR EN SELECTOR SE DISTRIBUYE ARRAY--</h1>
+
+    <label for="cajaNombres">Elige un cliente:</label>
+    
+    <select name="cajaNombres" id="cajaNombres">
+        <option value="Pedro" data-index="0">Pedro</option>
+        <option value="Maria" data-index="1">María</option>
+        <option value="Luis" data-index="2">Luís</option>
+    </select>
+
+    <button type="button" id="boton">  IR </button>
+    
+    <div id="volcado">
+        <h3 id="signo">Signo: </h3>
+        <h3 id="anos">Años: </h3>
+        <h3 id="ciudad">Ciudad: </h3>
+        <h3 id="deporte">Deporte: </h3>        
+    </div>
+
+
+    <script src="js/alSelectorBotonArray.js"> </script>
+
+</body>
+</html>

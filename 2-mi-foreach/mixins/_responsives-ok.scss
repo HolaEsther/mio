@@ -1,0 +1,27 @@
+
+
+@mixin grande1200() { @media screen and (max-width: 1200px) { 
+    @content; 
+    } 
+};
+
+@mixin mediano950(){ @media screen and (max-width:950px) {
+        @content; 
+    }
+};
+
+
+@mixin mediano650(){ @media screen and (max-width:650px) {
+    @content; 
+}
+};
+
+@mixin movil500(){  @media screen and (max-width:500px) {
+        @content; 
+    }
+};
+
+@mixin minimovil400(){  @media screen and (max-width:400px) {
+    @content; 
+}
+};

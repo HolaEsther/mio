@@ -1,0 +1,82 @@
+
+.content{
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+
+.cajas{
+    width: 95%;
+    height: 40em;
+}
+
+#caja-1{
+    border: 4px solid red;
+}
+#caja-2{
+    border: 4px solid rgb(0, 255, 21);
+}
+#caja-3{
+    border: 4px solid rgb(119, 0, 255);
+}
+
+input{
+    display:none;
+}
+
+label#label-1 span{
+    width: 120px;
+    height: 120px;
+    background-color:  rgb(108, 199, 240);
+    background: url(../imags/emperatriz-tarot.jpg) no-repeat,center,center;
+
+    position:absolute;
+    top:20px;
+    left:20px;
+    cursor:pointer;
+}
+label#label-2 span{
+    width: 120px;
+    height: 120px;
+    background-color:  rgb(108, 199, 240);
+    background: url(../imags/domo-tierra.jpg) no-repeat,center,center;
+
+    position:absolute;
+    top:150px;
+    left:20px;
+    cursor:pointer;
+}
+label#label-3 span{
+    width: 120px;
+    height: 120px;
+    background-color:  rgb(108, 199, 240);
+    background: url(../imags/salita-gente.jpg) no-repeat,center,center,cover;
+
+    position:absolute;
+    top:280px;
+    left:20px;
+    cursor:pointer;
+}
+
+.grandes{
+    width: 500px;
+    height: 400px;
+    background-color: darkgrey;
+    position:absolute;
+        top:20px;
+        left:400px;
+    opacity:0;
+}
+
+#input-1:checked~#grande-1{
+    opacity:1;
+    z-index:10;
+}
+#input-2:checked~#grande-2{
+    opacity:1;
+    z-index:10;
+}
+#input-3:checked~#grande-3{
+    opacity:1;
+    z-index:10;
+}

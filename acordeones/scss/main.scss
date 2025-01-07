@@ -1,0 +1,76 @@
+body{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: center;
+    border: 20px solid orange;
+
+    }  //  FIN del body
+    
+///////////  para el FORMULARIO  ///////////////////
+
+
+
+
+#enviar{
+    margin-left:3em; 
+    width: 80px;
+    height: 40px;
+    font-size:1.2em;
+}
+.inactivo{
+    background-color: pink;
+}
+.activo{
+    background-color: green;
+}
+
+/////////////  FIN DE para el FORMULARIO  /////////////////
+
+
+
+    
+    .acordeones{
+        display:flex;
+        flex-direction: column; 
+    
+        width: 50%;
+        height: auto;
+        border:4px solid black;
+        background-color: aquamarine;
+    
+        padding:2em 2em;
+
+                &__h2{
+                    color:red;
+                    font-size:2em;
+                }
+
+                &__conjuntitos{
+                display:flex;
+                flex-direction: column;
+                height: 0;
+                overflow:hidden;
+                position:relative;
+                }
+            
+                &__check-1,&__check-2,&__check-3 {
+                    display:none;
+                }
+                
+                &__check-1:checked~&__conjuntitos-1{                    
+                    height: auto;
+                    background-color: darkturquoise;
+                    transition:height 1.1s; 
+                }
+                &__check-2:checked~&__conjuntitos-2{                    
+                    height: auto;
+                    background-color: darkturquoise;
+                    transition:height 1.1s; 
+                }
+                &__check-3:checked~&__conjuntitos-3{                    
+                    height: auto;
+                    background-color: darkturquoise;
+                    transition:height 1.1s; 
+                }
+            }  // FIN de  .acordeones

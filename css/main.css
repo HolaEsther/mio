@@ -1,0 +1,73 @@
+body {
+  background-color: aqua;
+}
+body .content__labels span {
+  background: url(../imags/salita-gente.jpg) no-repeat, center, center;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  cursor: pointer;
+}
+body .content__labels span__inputs {
+  display: none;
+}
+body .content__labels span__navs {
+  position: absolute;
+  top: 60px;
+  left: -100%;
+  transition: left 0.6s;
+  background-color: aquamarine;
+}
+body .content__labels span__input:checked ~ body .content__labels span__navs {
+  left: 100px;
+}
+body .content__label.content__labels span:hover {
+  background: url(../imags/emperatriz-tarot.jpg) no-repeat, center, center;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */top: 150px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.content .cajas label#label-3 span {
+  width: 120px;
+  height: 120px;
+  background-color: rgb(108, 199, 240);
+  background: url(../imags/salita-gente.jpg) no-repeat, center, center, cover;
+  position: absolute;
+  top: 280px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.content .cajas .grandes {
+  width: 500px;
+  height: 400px;
+  background-color: darkgrey;
+  position: absolute;
+  top: 20px;
+  left: 400px;
+  opacity: 0;
+}
+
+.content .cajas #input-1:checked ~ .content .cajas #grande-1 {
+  opacity: 1;
+  z-index: 10;
+}
+
+.content .cajas #input-2:checked ~ .content .cajas #grande-2 {
+  opacity: 1;
+  z-index: 10;
+}
+
+.content .cajas #input-3:checked ~ .content .cajas #grande-3 {
+  opacity: 1;
+  z-index: 10;
+}/*# sourceMappingURL=main.css.map */

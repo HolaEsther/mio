@@ -1,0 +1,54 @@
+
+/*   para el SLIDER viendo cómo se corren */
+
+#cajeta{
+    background-color: black;
+    width: 300px;
+    height: 600px;
+    position:relative;
+        left:30%;
+        top:25%;    
+    overflow:hidden;
+}
+#slider {      
+    width: 100%; 
+    height: auto; 
+    border-top: 15px solid  yellow;
+    border-bottom: 15px solid  yellow;
+    position: relative; 
+        z-index:5;
+        top:15%;
+        left:30px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: beige;
+} 
+#slider img {
+    width: 300px; 
+    height: auto; 
+    object-fit: cover; 
+} 
+#prev,#next {
+    position: absolute;
+    z-index:15;
+    margin-top: 10%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: bolder;
+    color:rgb(246, 86, 72);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+} 
+#prev { 
+    left: 10px; 
+} 
+#next { 
+   left: 280px; 
+}  
+
+
+

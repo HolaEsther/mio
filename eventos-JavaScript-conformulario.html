@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> EVENTOS JavaScript  con sencillo FORMULARIO </title>
+    <link rel="stylesheet" href="main-formu.css">
+    <!-- <script src="js/jquery-3.2.1.min.js">  </script> -->  <!-- JAVASCRIPT --> 
+</head>
+<body>
+
+
+    
+    <form id="myform" name="myform" method="get" >
+        <label for="correo" id="label">  Suscríbete a nuestra  Newsletter </label>
+        <input type="email"  id="correo" name="correo">
+    </form>
+
+    <div id="cajita">
+        <button type="submit"  id="enviar" class="inactivo" > Enviar </button>
+    </div>
+    
+    
+                <!---    ::::::::::::::::::::::::::::::         -->
+
+    <div id="disparador-rojo">     </div>
+    <div id="caja-rojo" class="cajas-rojo">    </div>
+
+
+
+
+               <!---    ::::::::::::::::::::::::::::::         -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   <!-- LIBRERÍA de JAVASCRIPT -->
+
+    <script>
+            $(document).ready(function (){  
+            
+    /*  ///////// para EVENTOS con el FORMULARIO   /////////////  */
+
+            const email=document.querySelector("#correo");
+            const label=document.querySelector("label");
+            const boton=document.querySelector("#enviar");
+            const formu=document.querySelector("#myform");
+
+
+            boton.addEventListener("click",Cambios,false);
+
+            function Cambios(){
+                if (boton.classList.contains('inactivo')) {
+                    boton.classList.remove('inactivo');
+                    boton.classList.add('activo'); 
+                    
+                    boton.textContent="Enviado";
+                    
+                    formu.classList.add('irse');
+                   
+                    formu.reset();                        
+                    
+                } else {
+                    boton.classList.remove('activo');
+                    boton.classList.add('inactivo');
+
+                    boton.textContent="Subscrito";
+                }
+
+                console.log(boton.classList);
+            } //function FIN
+        /*  ///////// FIN DE para EVENTOS con el FORMULARIO   /////////////  */
+
+
+
+        /*  ///////// para CREAR ELEMENTOS con el disparador   /////////////  */
+
+            const rojo=document.querySelector('#disparador-rojo');
+            rojo.addEventListener('click',cuadrado);
+            function cuadrado(){
+                const cuadrado=document.createElement('div');
+                cuadrado.classList='cuadrado-rojo';
+                cuadrado.id='cuadradorojo';
+
+                const insertarCuadrado=document.querySelector('#caja-rojo');
+                insertarCuadrado.appendChild(cuadrado);
+             
+                console.log(insertarCuadrado.children);               
+            }
+            
+            
+            rojo.addEventListener('mouseover',Rectangulo,false);
+            function Rectangulo(){
+                const rectangulo=document.createElement('div');
+                rectangulo.classList='rectangulo-rojo';
+                rectangulo.id='rectangulorojo';
+               
+                const insertarRectangulo=document.querySelector('#caja-rojo');
+                insertarRectangulo.appendChild(rectangulo);
+
+                 /* if(document.querySelectorAll('.rectangulo-rojo')[1]){
+                    document.querySelectorAll('.rectangulo-rojo').removeChild(document.querySelectorAll('.rectangulo-rojo').children[1]);                   
+                } */
+
+                console.log(insertarRectangulo.children);               
+            }
+
+
+                        
+            rojo.addEventListener('mouseleave',QuitarR,false);
+            function QuitarR(){
+
+                const cuadrado=document.querySelector('#cuadradorojo');
+                cuadrado.remove();
+
+                console.log(insertarRectangulo.children);               
+            }
+
+        });     
+
+    </script>
+        
+</body>
+</html>
